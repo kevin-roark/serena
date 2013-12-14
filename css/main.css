@@ -27,6 +27,7 @@ body {
 #serena-image {
     max-width: 720px;
     max-height: 500px;
+    cursor: url(../img/cursor-green.png), pointer; 
 }
 
 #serena-image-caption {

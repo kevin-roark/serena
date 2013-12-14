@@ -54,8 +54,9 @@ $(function() {
         var image_place = $('#serena-image-place');
         var caption_place = $('#serena-image-caption');
 
-        $('#place-of-interest').mouseenter(hover_action);
-        $('#place-of-interest').mouseleave(hover_action);
+        serena.mouseenter(hover_action);
+        serena_right.mouseenter(hover_action);
+        serena_left.mouseenter(hover_action);
         image_place.click(hover_action);
 
         function hover_action(event, c) {
@@ -72,7 +73,7 @@ $(function() {
                 caption_place.html(im.caption);
                 var border_style = '5px solid ' + c;
                 $('#serena-image').css('border', border_style);
-            }, 250);
+            }, 75);
         }
 
         function set_names_color(c) {
