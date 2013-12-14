@@ -59,7 +59,7 @@ $(function() {
 
         function hover_action(event, c) {
             caption_place.html('');
-            
+
             if (!c)
                 var c = get_random_color();
             set_names_color(c);
@@ -71,7 +71,7 @@ $(function() {
                 caption_place.html(im.caption);
                 var border_style = '5px solid ' + c;
                 $('#serena-image').css('border', border_style);
-            }, 50);
+            }, 250);
         }
 
         function set_names_color(c) {
