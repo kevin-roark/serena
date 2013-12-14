@@ -34,6 +34,15 @@ $(function() {
         return color;
     }
 
+    function hexToRgb(hex) {
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16)
+        } : null;
+    }
+
     function get_serena_image() {
         var photo_id = getRandomInt(1, num_photos).toString();
         var photo_url = 'img/good-stuff/' + photo_id + '.jpg';
@@ -57,15 +66,15 @@ $(function() {
         serena.mouseenter(hover_action);
         serena_right.mouseenter(hover_action);
         serena_left.mouseenter(hover_action);
-        image_place.click(hover_action);
+        $('#place-of-interest').click(hover_action);
 
         function hover_action(event, c) {
             caption_place.html('');
 
             if (!c)
-                var c = get_random_color();
+                c = get_random_color();
             set_names_color(c);
-            console.log(c);
+            set_background_color(c);
 
             var im = get_serena_image();
             image_place.html(im.image);
@@ -81,6 +90,14 @@ $(function() {
             serena_left.css('color', c);
             serena_right.css('color', c);
             banner.css('color', c);
+        }
+
+        function set_background_color(c) {
+            var rgb = hexToRgb(c);
+            if (! rgb)
+                return;
+            var col = 'rgba(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ',0.5)';
+            $('body').css('background-color', col);
         }
 
         hover_action(null, '#000');
