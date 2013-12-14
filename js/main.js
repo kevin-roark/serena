@@ -50,6 +50,7 @@ $(function() {
         var serena = $('#serena-name');
         var serena_left = $('#serena-name-left');
         var serena_right = $('#serena-name-right');
+        var banner = $('#christmas-banner');
         var image_place = $('#serena-image-place');
         var caption_place = $('#serena-image-caption');
 
@@ -78,6 +79,7 @@ $(function() {
             serena.css('color', c);
             serena_left.css('color', c);
             serena_right.css('color', c);
+            banner.css('color', c);
         }
 
         hover_action(null, '#000');
