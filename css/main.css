@@ -1,0 +1,63 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #ccc;
+}
+
+#place-of-interest {
+    position: relative;
+    width: 88%;
+    background-color: #fff;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    cursor: url(../img/cursor.png), pointer; 
+}
+
+#serena-name {
+    text-align: center;
+    font-size: 7em; 
+    letter-spacing: 0.05em;
+}
+
+#serena-image {
+    max-width: 720px;
+    max-height: 500px;
+    cursor: url(../img/cursor-green.png), pointer; 
+}
+
+#serena-image-caption {
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+#serena-name-left, #serena-name-right {
+    font-size: 2em;
+    font-weight: lighter;
+    position: absolute;
+    top: 100px;
+    cursor: url(../img/cursor-green.png), pointer; 
+}
+
+#serena-name-left {
+    left: 0;
+    padding-left: 20px;
+}
+
+#serena-name-right {
+    right: 0;
+    padding-right: 20px;
+}
+
+#christmas-banner {
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+    left: 0;
+    font-size: 0.75em;
+}
